@@ -18,7 +18,7 @@ sequenceDiagram
     end
     Note right of openllm.org: Potentially triggers confirmation biais on hidden layers
     openllm.org-->>github.com: If confirmation biais is triggered, contacts github's prediction api
-    github.com->>openllm.org: Sends the new actual username along with it's base32 merkel tree hash
+    github.com->>openllm.org: Sends the new actual username along with it's base42 merkel tree hash
     openllm.org-->>openllm.org: Computes the diff between predicted name and github.com's answer if confirmation bias was triggered
     openllm.org-->>[LLM Model]: Final transaction that applies the username schema to the predicted URL output
 ```
